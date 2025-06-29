@@ -108,3 +108,5 @@ dist
 
 # macOS service files
 .DS_Store
+
+.vs/
