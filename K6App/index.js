@@ -1,10 +1,20 @@
-import GetAllProducts from "./scenarios/GetAllProducts.js";
-import {group, sleep} from 'k6';
+import GetAllProducts, {
+  GetProductDuration,
+} from "./scenarios/GetAllProducts.js";
+import { group, sleep } from "k6";
 
-export default() => {
-    group('Endpoint Get All Products - Controller Products - Products.Api', () => {
-        GetAllProducts();
-    });
+export const options = {
+  vus: 10,
+  duration: "30s",
+};
 
-    sleep(1);
-}
+export default () => {
+  group(
+    "Endpoint Get All Products - Controller Products - Products.Api",
+    () => {
+      GetAllProducts();
+    }
+  );
+
+  sleep(1);
+};
