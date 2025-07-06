@@ -32,3 +32,13 @@ Esses parâmetros adicionais podem ser substituidos por uma configuração, que 
   vus: 10,
   duration: "30s",
 };`
+
+---
+
+## Execução
+
+Os testes podem ser executados de 3 formas:
+
+- Local: executadas em uma máquina ou cotainer, usando o comando `k6 run`;
+- Distribuida: executadas em um cluster Kubernetes;
+- Cloud: executado diretamente no Grafana Cloud.
