@@ -40,3 +40,22 @@ Por exemplo, para demonstrar a primeira opção (e que foi a forma feita nesse p
 };`
 
 Além disso, é possível executar o k6 a nível de chamadas de API e também a [nível de navegador](https://grafana.com/docs/k6/latest/using-k6-browser/).
+
+## Apresentação dos resultados
+
+### Nível de detalhe das informações
+
+Ao término da execução dos testes, a forma do relatório gerado pode ser configurada através da opção `--summary-mode`, que seus valores basicamente podem ser:
+
+- `compact`: Informações resumidas e diretas;
+- `full`: Inclui todas as informações de forma detalhada.
+
+A seguir um exemplo: `k6 run --summary-mode=full index.js`. E mais detalhes podem ser encontradas [na documentação oficial](https://grafana.com/docs/k6/latest/using-k6/k6-options/reference/#summary-mode).
+
+### Saída de dados
+
+Basicamente os resultados podem ser mostrados de 3 formas, baseado na [documentação oficial](https://grafana.com/docs/k6/latest/results-output/end-of-test/):
+
+- Padrão: será apresentado no console que foi executado o comando de executar os testes;
+- Saída em tempo-real: será inserido o resultado em um arquivo CSV, JSON ou em um serviço externo;
+- Sumário Customizado: configurado via código o formato que será apresentado o resultado.
