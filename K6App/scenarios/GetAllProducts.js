@@ -2,6 +2,10 @@ import * as http from 'k6/http';
 import { check, fail, sleep } from 'k6';
 import { Trend, Rate } from 'k6/metrics';
 
+// Importando as métricas personalizadas
+// Trend: Métrica para medir a duração de requisições
+// Rate: Métrica para medir taxas de sucesso e falha
+// https://k6.io/docs/using-k6/metrics/#custom-metrics
 export let GetProductDuration = new Trend('get_product_duration');
 export let GetProductFailRate = new Rate('get_product_fail_rate');
 export let GetProductSuccessRate = new Rate('get_product_success_rate');
