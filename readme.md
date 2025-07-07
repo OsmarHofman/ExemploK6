@@ -42,3 +42,5 @@ Os testes podem ser executados de 3 formas:
 - Local: executadas em uma máquina ou cotainer, usando o comando `k6 run`;
 - Distribuida: executadas em um cluster Kubernetes;
 - Cloud: executado diretamente no Grafana Cloud.
+
+Além disso, é possível executar o k6 a nível de chamadas de API e também a [nível de navegador](https://grafana.com/docs/k6/latest/using-k6-browser/).
